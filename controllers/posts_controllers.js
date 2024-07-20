@@ -3,6 +3,9 @@ const Post_Schema = require("../models/Post_Model");
 const Project_Schema = require("../models/Project_Model");
 
 
+const welcome = async (req, res) => {
+  return res.send("Welcome Users")
+}
 
 const get_all_posts_controller = async (req, res, next) => {
 
@@ -169,4 +172,4 @@ const delete_post_controller = async (req, res, next) => {
 
 
 
-module.exports = { get_all_posts_controller,addTask,getAllMessages,create_Project_controller,sendMessage, create_post_controller, edit_post_controller, delete_post_controller,get_all_project_controller};
+module.exports = {welcome, get_all_posts_controller,addTask,getAllMessages,create_Project_controller,sendMessage, create_post_controller, edit_post_controller, delete_post_controller,get_all_project_controller};

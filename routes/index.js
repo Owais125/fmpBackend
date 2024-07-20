@@ -7,12 +7,13 @@ const {
 const {
   check_auth_middleware,
 } = require("../middleware/check_auth_middleware");
-const { create_post_controller, get_all_posts_controller, edit_post_controller, delete_post_controller, get_all_posts_controller_For_Owais, create_Project_controller, get_all_project_controller, sendMessage, getAllMessages, addTask } = require("../controllers/posts_controllers");
+const { create_post_controller, get_all_posts_controller, edit_post_controller, delete_post_controller, get_all_posts_controller_For_Owais, create_Project_controller, get_all_project_controller, sendMessage, getAllMessages, addTask, welcome } = require("../controllers/posts_controllers");
 
 
 const router = express.Router();
 
 router.post("/signup", signup_controller);
+router.get("/wel", welcome);
 router.post("/login", login_controller);
 
 

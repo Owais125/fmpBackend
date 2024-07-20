@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const connect_to_database = async () => {
-  mongoose.connect('mongodb://localhost:27017/MobileApp');
+  mongoose.connect(process.env.DB_URL);
 
   mongoose.connection.on("connected", () => {
     console.log("Mongodb is connected!");
